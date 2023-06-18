@@ -1,0 +1,176 @@
+$ pwd
+/c/Users/Sys1
+
+Sys1@DESKTOP-IO2O6PB MINGW64 ~
+$ cd git
+
+Sys1@DESKTOP-IO2O6PB MINGW64 ~/git
+$
+
+
+
+
+
+Sys1@DESKTOP-IO2O6PB MINGW64 ~/git
+$
+
+Sys1@DESKTOP-IO2O6PB MINGW64 ~/git
+$
+
+Sys1@DESKTOP-IO2O6PB MINGW64 ~/git
+$
+
+Sys1@DESKTOP-IO2O6PB MINGW64 ~/git
+$
+
+Sys1@DESKTOP-IO2O6PB MINGW64 ~/git
+$ mkdir prac
+mkdir: cannot create directory ‘prac’: File exists
+
+Sys1@DESKTOP-IO2O6PB MINGW64 ~/git
+$ cd prac
+
+Sys1@DESKTOP-IO2O6PB MINGW64 ~/git/prac
+$ git clone "https://github.com/sreyanwika/calacy.git"
+fatal: destination path 'calacy' already exists and is not an empty directory.
+
+Sys1@DESKTOP-IO2O6PB MINGW64 ~/git/prac
+$ cd calacy
+
+Sys1@DESKTOP-IO2O6PB MINGW64 ~/git/prac/calacy (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Sys1@DESKTOP-IO2O6PB MINGW64 ~/git/prac/calacy (main)
+$ git branch div
+
+Sys1@DESKTOP-IO2O6PB MINGW64 ~/git/prac/calacy (main)
+$ git branch
+  div
+* main
+
+Sys1@DESKTOP-IO2O6PB MINGW64 ~/git/prac/calacy (main)
+$ git checkout div
+Switched to branch 'div'
+
+Sys1@DESKTOP-IO2O6PB MINGW64 ~/git/prac/calacy (div)
+$ git add div.txt
+
+Sys1@DESKTOP-IO2O6PB MINGW64 ~/git/prac/calacy (div)
+$ git commit -m "this is div commit"
+[div 94d1865] this is div commit
+ 1 file changed, 4 insertions(+)
+ create mode 100644 div.txt
+
+Sys1@DESKTOP-IO2O6PB MINGW64 ~/git/prac/calacy (div)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Sys1@DESKTOP-IO2O6PB MINGW64 ~/git/prac/calacy (main)
+$ git checkout div
+Switched to branch 'div'
+
+Sys1@DESKTOP-IO2O6PB MINGW64 ~/git/prac/calacy (div)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Sys1@DESKTOP-IO2O6PB MINGW64 ~/git/prac/calacy (main)
+$ git branch issue
+
+Sys1@DESKTOP-IO2O6PB MINGW64 ~/git/prac/calacy (main)
+$ git branch
+  div
+  issue
+* main
+
+Sys1@DESKTOP-IO2O6PB MINGW64 ~/git/prac/calacy (main)
+$ git checkout issue
+Switched to branch 'issue'
+
+Sys1@DESKTOP-IO2O6PB MINGW64 ~/git/prac/calacy (issue)
+$ git add add.txt
+
+Sys1@DESKTOP-IO2O6PB MINGW64 ~/git/prac/calacy (issue)
+$ git commit -m "this is add commit "
+[issue ba3f094] this is add commit
+ 1 file changed, 1 insertion(+)
+
+Sys1@DESKTOP-IO2O6PB MINGW64 ~/git/prac/calacy (issue)
+$ git diff main issue
+diff --git a/add.txt b/add.txt
+index b845e6d..5f2e946 100644
+--- a/add.txt
++++ b/add.txt
+@@ -1,4 +1,5 @@
+ ADD(){
+ int a,b;
+ int sum=a+b;
++addition is nothing but sum..^M
+ }
+\ No newline at end of file
+
+Sys1@DESKTOP-IO2O6PB MINGW64 ~/git/prac/calacy (issue)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Sys1@DESKTOP-IO2O6PB MINGW64 ~/git/prac/calacy (main)
+$ git merge issue
+Updating 50612a0..ba3f094
+Fast-forward
+ add.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+Sys1@DESKTOP-IO2O6PB MINGW64 ~/git/prac/calacy (main)
+$ git diff main issue
+
+Sys1@DESKTOP-IO2O6PB MINGW64 ~/git/prac/calacy (main)
+$$ git push -u origin main
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (8/8), 853 bytes | 170.00 KiB/s, done.
+Total 8 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/sreyanwika/calacy.git
+   50612a0..bb9b103  main -> main
+branch 'main' set up to track 'origin/main'.
+
+Sys1@DESKTOP-IO2O6PB MINGW64 ~/git/prac/calacy (main)
+$
+
+
+--->git push error
+
+$ git fetch origin master:tmp
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 0), reused 6 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), 492 bytes | 6.00 KiB/s, done.
+From https://github.com/sreyanwika/mid1
+ * [new branch]      master     -> tmp
+ * [new branch]      master     -> origin/master
+
+Sys1@DESKTOP-IO2O6PB MINGW64 ~/mid1 (master)
+$ git rebase tmp
+Successfully rebased and updated refs/heads/master.
+
+Sys1@DESKTOP-IO2O6PB MINGW64 ~/mid1 (master)
+$ git push -u origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 304 bytes | 152.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/sreyanwika/mid1.git
+   068bc4e..a58a006  master -> master
+branch 'master' set up to track 'origin/master'.
+

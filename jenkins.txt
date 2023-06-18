@@ -1,0 +1,55 @@
+Jenkins program1:
+open jenkins by localhost:8080
+then login with credentials..
+>go to new item
+>enter the item name
+>click on the free style project
+>after that write the description what the ptoject is about..
+>then come down go to build stepsss..
+>click execute shell under the build steps..
+>write again d desc 
+>save
+>then run it with build now
+
+jenkins program2 :
+*/5 * * * *
+open jenkins by localhost:8080
+then login with credentials..
+>go to new item
+>enter the item name
+>click on the free style project
+>after that write the description what the ptoject is about..
+>go to build triggers
+>under thst click build periodically
+>in scheme */5 * * * * it is used for every 5 minute or * * * * * this is for every 5 sec
+>then come down go to build stepsss..
+>click execute shell under the build steps..
+>write again d desc 
+>save
+>then run it with build now
+
+>Jenkins program3:
+connecting with github:
+>first login to github then create a repository ex:hyy
+>then add a file prg.java
+public class prog{
+public Ststic void main(String[] args){
+System.out.println("hyy");
+}
+}
+>go to jenkins
+>new item
+>enter the item name
+>click on the free style project
+>after that write the description what the ptoject is about..
+>under source code management
+>select the git
+>under repository url pase the url of the repo ex:https://github.com/sreyanwika/Hy.git
+>branches to build */master
+>repository browser auto...remaining all none
+>under build steps add a build step where click on the execute windows batch command 
+javac prg.java
+java prg
+>save and run
+>status
+>console output
